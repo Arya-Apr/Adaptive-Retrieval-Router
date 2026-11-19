@@ -1,0 +1,23 @@
+[project]
+name = "adaptive-retrieval-router"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "azure-storage-blob==12.31.1", "azure-identity==1.27.0", "mcp>=1.12,<2",
+  "fastapi>=0.115", "uvicorn[standard]>=0.30", "pydantic-settings>=2.5",
+  "langgraph>=0.2", "redis>=5.0", "sqlalchemy>=2.0", "asyncpg>=0.29", "pgvector>=0.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "httpx>=0.27"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["src"]

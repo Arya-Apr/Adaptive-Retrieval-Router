@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "entries": 256,
+    "routing_queries": 28,
+    "routing_correct": 24,
+    "always_rag_correct": 12,
+    "retrieval_queries": 12,
+    "full_rank_hit_at_5": 9,
+    "full_rank_mrr_at_10": 0.438,
+    "title_rank_hit_at_5": 7,
+    "title_rank_mrr_at_10": 0.383
+  },
+  "cases": [
+    {
+      "query": "Authenticate using a managed identity",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "ManagedIdentityCredential",
+      "full_rank": 2,
+      "title_rank": 4
+    },
+    {
+      "query": "Download a blob into a stream",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobClient.download_blob",
+      "full_rank": null,
+      "title_rank": 10
+    },
+    {
+      "query": "Enumerate blobs in a container",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "ContainerClient.list_blobs",
+      "full_rank": null,
+      "title_rank": 10
+    },
+    {
+      "query": "Upload bytes from a file",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobClient.upload_blob",
+      "full_rank": 4,
+      "title_rank": 8
+    },
+    {
+      "query": "Restore a soft-deleted blob",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobClient.undelete_blob",
+      "full_rank": 2,
+      "title_rank": 8
+    },
+    {
+      "query": "Issue a user delegation key",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobServiceClient.get_user_delegation_key",
+      "full_rank": 1,
+      "title_rank": 1
+    },
+    {
+      "query": "Stage a block before committing it",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobClient.stage_block",
+      "full_rank": 1,
+      "title_rank": 1
+    },
+    {
+      "query": "Sign in using Azure CLI credentials",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "AzureCliCredential",
+      "full_rank": 2,
+      "title_rank": 5
+    },
+    {
+      "query": "Authenticate through an interactive browser",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "InteractiveBrowserCredential",
+      "full_rank": 4,
+      "title_rank": 5
+    },
+    {
+      "query": "Rotate the lease identifier",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobLeaseClient.change",
+      "full_rank": null,
+      "title_rank": 6
+    },
+    {
+      "query": "Read container metadata and properties",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "ContainerClient.get_container_properties",
+      "full_rank": 4,
+      "title_rank": 3
+    },
+    {
+      "query": "Copy data from a source URL",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "target": "BlobClient.start_copy_from_url",
+      "full_rank": 1,
+      "title_rank": 1
+    },
+    {
+      "query": "What is the latest Azure storage pricing?",
+      "expected": "MCP",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Which regions support zone redundancy today?",
+      "expected": "MCP",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Look up the service limits on Microsoft Learn",
+      "expected": "MCP",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Has Entra authentication guidance changed this week?",
+      "expected": "MCP",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Are there new features in the November release?",
+      "expected": "MCP",
+      "predicted": "RAG"
+    },
+    {
+      "query": "Check current redundancy options",
+      "expected": "MCP",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Compare my installed identity client with the latest guidance",
+      "expected": "HYBRID",
+      "predicted": "HYBRID"
+    },
+    {
+      "query": "Find the Python upload method and its current service limits",
+      "expected": "HYBRID",
+      "predicted": "HYBRID"
+    },
+    {
+      "query": "Show the local retry settings alongside release notes",
+      "expected": "HYBRID",
+      "predicted": "HYBRID"
+    },
+    {
+      "query": "Compare DefaultAzureCredential with the newest authentication guidance",
+      "expected": "HYBRID",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Compare BlobClient.upload_blob in my environment with today's limits",
+      "expected": "HYBRID",
+      "predicted": "MCP"
+    },
+    {
+      "query": "Check SDK lease duration against Microsoft Learn",
+      "expected": "HYBRID",
+      "predicted": "HYBRID"
+    },
+    {
+      "query": "hello",
+      "expected": "NONE",
+      "predicted": "NONE"
+    },
+    {
+      "query": "Thanks!",
+      "expected": "NONE",
+      "predicted": "NONE"
+    },
+    {
+      "query": "Good morning",
+      "expected": "NONE",
+      "predicted": "RAG"
+    },
+    {
+      "query": "thank you",
+      "expected": "NONE",
+      "predicted": "NONE"
+    }
+  ]
+}
